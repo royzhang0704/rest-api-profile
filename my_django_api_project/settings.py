@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(l!vj2k7br@eb$j5%8x^!uy35)^*mp9w(8rcbsop91!zjir-=('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG',1)))
 
 ALLOWED_HOSTS = []
 
@@ -126,3 +126,6 @@ AUTH_USER_MODEL='api_profile.UserProfile'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATIC_ROOT='static/'
