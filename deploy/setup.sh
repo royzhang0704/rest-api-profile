@@ -3,7 +3,7 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='git@github.com:royzhang0704/rest-api-profile.git'
+PROJECT_GIT_URL='git@github.com:royzhang0704/rest-api-profile.git' #我們專案github網址
 
 PROJECT_BASE_PATH='/usr/local/apps/rest-api-profile'
 
