@@ -46,8 +46,6 @@ class HelloApiView(APIView):                        #APIView
         """Delete an object"""
         return Response({'method':'DELETE'})
 
-
-
 class HelloViewset(viewsets.ViewSet):               #ViewSet
     """Test API ViewSet"""
     serializer_class=serializers.HelloSerializer
@@ -106,6 +104,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet): ##ModelViewSet
     authentication_classes=(TokenAuthentication,)
     serializer_class=serializers.ProfileFeedItemSerializer
     queryset=models.ProfileFeedItem.objects.all()
+
     permissions_classes=(
     permissions.UpdateOwnStatus, #自定義的權限控制
     IsAuthenticatedOrReadOnly #此為內建的權限控制

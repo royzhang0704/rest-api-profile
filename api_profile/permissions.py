@@ -1,5 +1,4 @@
-from rest_framework import permissions
-
+from rest_framework import permissions #用來處理 API 的權限控制。
 class UpdateOwnProfile(permissions.BasePermission):
     """Allow user to edit their own profile"""
 

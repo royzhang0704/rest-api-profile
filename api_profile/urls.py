@@ -1,7 +1,5 @@
 from django.urls import path,include
-
-from rest_framework.routers import DefaultRouter
-
+from rest_framework.routers import DefaultRouter #為ViewSetAPI框架註冊URL
 from . import views
 
 router=DefaultRouter()
